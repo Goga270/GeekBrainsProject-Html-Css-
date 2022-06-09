@@ -426,5 +426,251 @@ header {
     }
 }
 
+.feturedWrap{
+    width: 100%;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    margin-bottom: 95px;
+}
+
+.fetured{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(359px, 1fr));
+    justify-items: center;
+    row-gap: 16px;
+}
+
+.feturedTitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.feturedTitleTop{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: Lato;
+    color: #222222;
+    margin-bottom: 3px;
+}
+
+.feturedTitleBottom{
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #9F9F9F;
+    text-align: center;
+}
+
+.feturedCard{
+    background: #F8F8F8;
+}
+
+.feturedCardImg{
+    position: relative;
+}
+
+.feturedCardImg img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.feturedCardImgDark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(58, 56, 56, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.feturedCardImgDark button{
+    border: 2px solid #FFFFFF;
+    background: none;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    font-family: Lato;
+    font-size: 14px;
+}
+
+.feturedCardImgDark button img{
+    width: 25px;
+    height: 23px;
+    margin-right: 10px;
+}
+
+.feturedCard:hover .feturedCardImgDark{
+    display: flex;
+}
+
+.futeredCardInfo{
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    margin-top: 25px;
+}
+
+.futeredCardTitle{
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+
+.futeredCardDescription{
+    font-weight: 300;
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5D5D5D;
+    margin-bottom: 18px;
+}
+
+.futeredCardPrice{
+    color: #F16D7F;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: Lato;
+    margin-bottom: 20px;
+}
+
+.feturedBrowseAll{
+    background: none;
+    border: 2px solid #F16D7F;
+    margin-top: 40px;
+    padding: 15px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    color: #F16D7F;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 400;
+}
+
+@media (min-width: 600px) {
+    .fetured{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        grid-template-rows: repeat(3, minmax(359px, 1fr));
+        justify-items: center;
+        row-gap: 16px;
+    }
+
+    .feturedWrap{
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 65px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fetured{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        grid-template-rows: repeat(2, minmax(359px, 1fr));
+        justify-items: center;
+        row-gap: 30px;
+    }
+
+    .feturedWrap{
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 95px;
+    }
+}
+
+.feturedBrowseAll:hover{
+    color: #FFFFFF;
+    background: #F16D7F;
+}
+
+.servicesWrap{
+    height: 100%;
+    width: 100%;
+    background: #222224;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 81px;
+}
+
+.servicesItem{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesItemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.servicesItemInfoTitle{
+    color: #FBFBFB;
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 20px;
+    margin-top: 27px;
+    margin-bottom: 15px;
+}
+
+.servicesItemInfoBottom{
+    color: rgba(251, 251, 251, 0.65);
+    font-size: 14px;
+    font-family: Lato;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+@media (min-width: 360px) {
+    .servicesContainer{
+        width: 360px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .servicesContainer{
+        width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .services{
+        flex-direction: row;
+    }
+}
 
 

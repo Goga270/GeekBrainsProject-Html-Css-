@@ -9,6 +9,8 @@ let darkScene = document.querySelectorAll('.brandDark');
 let menu = document.querySelector('.menu');
 let content = document.querySelector('.brand');
 let offers = document.querySelector('.offersWrap');
+let darkImgFetured = document.querySelector('.feturedCardImgDark');
+let feturedCard = document.querySelector('.feturedCard');
 menuImg.addEventListener('click', function (){
     for (let i=0;i<darkScene.length;i++){
         darkScene[i].classList.toggle('hidden');
@@ -37,6 +39,9 @@ offers.addEventListener('click', function (){
     }
     //darkScene.classList.add('hidden');
     menu.classList.add('hidden');
+});
+feturedCard.addEventListener('mousemove', function (){
+   //darkImgFetured.classList.toggle('hidden')
 });
 
 
