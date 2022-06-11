@@ -611,15 +611,16 @@ header {
 }
 
 .services{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 45px;
     padding-bottom: 81px;
+    padding-top: 45px;
 }
 
 .servicesItem{
-    margin-top: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -669,8 +670,56 @@ header {
     }
 
     .services{
-        flex-direction: row;
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
+.subscribeWrap{
+    background: url("../images/subscribe/subscribe.jpg");
+}
+
+.subscribe{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.subscribeTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 64px;
+}
+
+.subscribeTitleInfo{
+    text-align: center;
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 18px;
+    font-style:italic;
+    color: #222224;
+    margin-top: 30px;
+}
+
+.subsribeText{
+    padding-top: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscribeTextTitle{
+    font-size: 24px;
+    font-family: Lato;
+    font-weight: 700;
+    color: #222224;
+}
+
+.subscribeTextBottom{
+    color: #222224;
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 14px;
+}
 
