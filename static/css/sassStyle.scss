@@ -848,3 +848,42 @@ footer{
   }
 
 }
+
+.catalogBrandWrap{
+  height: 100%;
+  width: 100%;
+  background: #F8F3F4;
+
+  .catalogBrand{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 46px;
+
+    .catalogBrandTitle{
+      color: #F16D7F;
+      font-family: Lato, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+    }
+
+    .catalogBrandPath{
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      font-family: Lato, sans-serif;
+      color: rgba(99, 99, 99, 0.53);
+      padding-top: 32px;
+
+      span{
+        color: #F16D7F;
+        font-weight: 700;
+      }
+    }
+  }
+}
