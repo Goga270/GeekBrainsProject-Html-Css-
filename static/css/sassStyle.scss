@@ -206,7 +206,7 @@ header {
 
 .menu {
   background: white;
-  height: inherit;
+  height: auto;
   width: inherit;
   position: relative;
   margin-left: auto;
@@ -276,7 +276,7 @@ header {
   }
 
   .menu{
-    height: inherit;
+    height: auto;
   }
 
 }
@@ -290,7 +290,7 @@ header {
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .menu_element_hidden{
@@ -433,6 +433,26 @@ header {
   padding-right: 8px;
   box-sizing: border-box;
   margin-bottom: 95px;
+
+  .pagenation{
+    margin: 40px auto 0;
+    width: 284px;
+    height: 44px;
+    border: 1px solid #EBEBEB;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      font-family: Lato, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      color: #C4C4C4;
+    }
+  }
 }
 
 .fetured{
@@ -441,6 +461,7 @@ header {
   grid-template-rows: repeat(6, minmax(359px, 1fr));
   justify-items: center;
   row-gap: 16px;
+
 }
 
 .feturedTitle{
@@ -850,19 +871,29 @@ footer{
 }
 
 .catalogBrandWrap{
-  height: 100%;
+  height: 148px;
   width: 100%;
   background: #F8F3F4;
+  position: relative;
 
   .catalogBrand{
     height: inherit;
-    width: inherit;
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 46px;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 60px 16px;
+    }
 
     .catalogBrandTitle{
       color: #F16D7F;
@@ -873,17 +904,316 @@ footer{
     }
 
     .catalogBrandPath{
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 17px;
-      font-family: Lato, sans-serif;
-      color: rgba(99, 99, 99, 0.53);
-      padding-top: 32px;
 
-      span{
+      a{
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: Lato, sans-serif;
+        color: rgba(99, 99, 99, 0.53);
+      }
+      @media (max-width: 767px) {
+        padding-top: 32px;
+      }
+
+      a:last-child{
         color: #F16D7F;
         font-weight: 700;
+      }
+
+      span{
+        color: rgba(99, 99, 99, 0.53);
       }
     }
   }
 }
+
+.filtersWrap{
+  width: 100%;
+  height: 100%;
+
+  .filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8px 40px;
+    
+    @media (min-width: 768px) {
+      padding: 24px 16px 24px;
+    }
+
+    @media (min-width: 1600px) {
+      justify-content: flex-start;
+      padding: 51px 0 64px;
+    }
+
+    .filterLeft{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .filterLabel{
+        display: none;
+        font-family: Lato, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        padding-right: 11px;
+        position: relative;
+        cursor: pointer;
+        z-index: 3;
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      .filterIcon{
+        z-index: 3;
+        position: relative;
+        @media (min-width: 768px) {
+          width: 15px;
+          height: 10px;
+        }
+      }
+      
+      @media (min-width: 1600px) {
+        padding-right: 320px;
+      }
+
+      .filterPopup{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 360px;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
+        z-index: 2;
+        padding: 46px 16px 16px;
+        overflow-y: auto;
+
+        .filterPopupCategory{
+
+          .filterPopupCategoryNav{
+            a{
+              text-decoration: none;
+              display: block;
+              padding-left: 34px;
+              padding-right: 16px;
+              font-family: Lato;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+              color: #6F6E6E;
+            }
+
+            a:not(:last-child){
+              margin-bottom: 11px;
+            }
+          }
+
+          .filterPopupCategoryTitle{
+            cursor: pointer;
+            font-family: Lato,sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 37px; /* Сделали высоту строки = высоте блока для того чтобы поместить надпись по центру */
+            color: #F16D7F;
+            padding-left: 11px;
+            min-height: 37px;
+            border-bottom: 1px solid #EBEBEB;
+            margin-bottom: 24px;
+            position: relative;
+
+            &:before{ /* Псевдоэлемент :before применяется для отображения желаемого контента до содержимого элемента, к которому он добавляется. Работает совместно со свойством content. */
+              content: "";
+              width: 5px;
+              min-height: inherit;
+              background: #F16D7F;
+              position: absolute;
+              left: 0;
+              top: 1px;
+            }
+          }
+        }
+        .filterPopupCategory:not(:first-child){
+          margin-top: 18px;
+        }
+      }
+    }
+
+
+    .filterRight{
+      display: flex;
+      flex-direction: row;
+
+      div{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        
+        @media (min-width: 768px) {
+          align-items: center;
+        }
+
+        span{
+          font-family: Lato, sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+          color: #6F6E6E;
+          padding-right: 8px;
+          
+          @media (min-width: 768px) {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+
+        img{
+          @media (max-width: 767px) {
+            padding-top: 3px;
+          }
+        }
+      }
+
+      div:not(div:last-child){
+        padding-right: 23px;
+      }
+      .filterSize{
+        position: relative;
+        .filterSizeWrap{
+          cursor: pointer;
+          padding-right: 0;
+        }
+
+        .filterSizeCheckboxes{
+          position: absolute;
+          left: 0;
+          top: 20px;
+          background: #FFFFFF;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          z-index: 3;
+          padding: 7px 9px;
+          box-sizing: border-box;
+
+          div{
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+
+            span{
+              margin-left: 8px;
+            }
+          }
+
+          div:not(:last-child){
+            margin-bottom: 6px;
+          }
+        }
+      }
+
+      .filterTrends{
+        position: relative;
+        .filterTrendsWrap{
+          cursor: pointer;
+          padding-right: 0;
+        }
+
+        .filterTrendsCheckboxes{
+          position: absolute;
+          left: 0;
+          top: 20px;
+          background: #FFFFFF;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          z-index: 3;
+          padding: 7px 9px;
+          box-sizing: border-box;
+
+          div{
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+
+            span{
+              margin-left: 8px;
+            }
+          }
+
+          div:not(:last-child){
+            margin-bottom: 6px;
+          }
+        }
+      }
+
+      .filterPrice{
+        position: relative;
+        .filterPriceWrap{
+          cursor: pointer;
+          padding-right: 0;
+        }
+
+        .filterPriceCheckboxes{
+          position: absolute;
+          left: 0;
+          top: 20px;
+          background: #FFFFFF;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          z-index: 3;
+          padding: 7px 9px;
+          box-sizing: border-box;
+
+          div{
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+
+            span{
+              margin-left: 8px;
+            }
+          }
+
+          div:not(:last-child){
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.filterPopupLabelHover{
+  color: #F16D7F !important;
+  left: 16px;
+  top: 13px;
+}
+
+.filterPopupIconHover{
+  left: 16px;
+  top: 13px;
+
+}
+
+.filterPriceFixedPosition{
+  padding: 7px 0 !important;
+}
+
+.feturedWrapCatalog{
+  margin-bottom: 64px;
+
+  @media (min-width: 1600px) {
+    margin-bottom: 96px;
+  }
+}
+
+
