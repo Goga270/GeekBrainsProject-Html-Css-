@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="static/css/sassStyle.css">
 </head>
+<body>
 <header>
     <div class="leftHeader">
         <img src="static/images/header/cake-slice.png" alt="logo" class="logo_img">
@@ -17,9 +22,8 @@
         <img src="static/images/header/cart.png" alt="cart" class="cart_img">
     </div>
 </header>
-<body>
 <div class="content">
-   <div class="catalogBrandWrap">
+    <div class="catalogBrandWrap">
        <div class="catalogBrand container">
           <div class="catalogBrandTitle">
               NEW ARRIVALS
@@ -32,7 +36,7 @@
               <a href="#">NEW ARRIVALS</a>
           </nav>
       </div>
-       <div class="menu hidden">
+       <div class="menu hidden animate__animated">
            <div class="img_close_menu">
                <img src="static/images/menu/close-icon.png" alt="Закрыть меню">
            </div>
@@ -111,7 +115,7 @@
                </div>
            </div>
        </div>
-  </div>
+   </div>
     <div class="filtersWrap">
         <div class="filters container">
             <div class="filterLeft">
@@ -379,8 +383,9 @@
     <div class="servicesWrap">
         <div class="services servicesContainer">
             <article class="servicesItem">
-                <img src="static/images/services/delivery.svg" alt="">
+                <!--                <img src="static/images/services/delivery.svg" alt="">-->
                 <div class="servicesItemInfo">
+                    <img src="static/images/services/delivery.svg" alt="">
                     <div class="servicesItemInfoTitle">
                         Free Delivery
                     </div>
@@ -388,10 +393,13 @@
                         Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                     </div>
                 </div>
+                <div class="servicesItemInfoInside">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur ea eaque eius est fugit id incidunt laborum, quibusdam quidem ratione unde voluptatem. Accusantium ad dolor neque quae quam totam?
+                </div>
             </article>
             <article class="servicesItem">
-                <img src="static/images/services/discount.svg" alt="">
                 <div class="servicesItemInfo">
+                    <img src="static/images/services/discount.svg" alt="">
                     <div class="servicesItemInfoTitle">
                         Sales & discounts
                     </div>
@@ -399,16 +407,22 @@
                         Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                     </div>
                 </div>
+                <div class="servicesItemInfoInside">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur ea eaque eius est fugit id incidunt laborum, quibusdam quidem ratione unde voluptatem. Accusantium ad dolor neque quae quam totam?
+                </div>
             </article>
             <article class="servicesItem">
-                <img src="static/images/services/assurance.svg" alt="">
                 <div class="servicesItemInfo">
+                    <img src="static/images/services/assurance.svg" alt="">
                     <div class="servicesItemInfoTitle">
                         Quality assurance
                     </div>
                     <div class="servicesItemInfoBottom">
                         Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                     </div>
+                </div>
+                <div class="servicesItemInfoInside">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur ea eaque eius est fugit id incidunt laborum, quibusdam quidem ratione unde voluptatem. Accusantium ad dolor neque quae quam totam?
                 </div>
             </article>
         </div>
@@ -453,7 +467,7 @@
         </div>
     </div>
 </footer>
-</body>
 <script src="static/js/scripts.js"></script>
 <script src="https://kit.fontawesome.com/6d1c84ded8.js" crossorigin="anonymous"></script>
+</body>
 </html>

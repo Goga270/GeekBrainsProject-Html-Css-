@@ -34,6 +34,7 @@ menuImg.addEventListener('click', function (){
     }
     //darkScene.classList.toggle('hidden');
     menu.classList.toggle('hidden');
+    menu.classList.toggle('animate__fadeInTopRight');
 });
 menuCloseImg.addEventListener('click', function (){
     for (let i=0;i<darkScene.length;i++){
@@ -91,4 +92,48 @@ if(url.includes('catalog.html')){
 
 
 }
+
+//Product scripts
+
+let sliderImages = document.querySelectorAll('.sliderImg');
+let sliderLeftArrow = document.querySelector('.sliderLeftArrow');
+let sliderRightArrow = document.querySelector('.sliderRightArrow');
+let sliderImgFirst = document.querySelector('.sliderImgFirst');
+let sliderImgLast = document.querySelector('.sliderImgLast');
+let nonHiddenEl = null;
+console.log(sliderImages);
+
+if(url.includes("product.html")){
+    sliderRightArrow.addEventListener('click', function (){
+        sliderImages.forEach(function (el){
+           if(!(el.classList.contains('hidden'))){
+               nonHiddenEl= el;
+
+           }
+        });
+        nonHiddenEl.classList.add('hidden');
+        if(nonHiddenEl.nextElementSibling != null){
+            nonHiddenEl.nextElementSibling.classList.remove('hidden');
+        }else {
+            sliderImgFirst.classList.remove('hidden');
+        }
+    });
+
+    sliderLeftArrow.addEventListener('click', function (){
+        sliderImages.forEach(function (el){
+            if(!(el.classList.contains('hidden'))){
+                nonHiddenEl= el;
+                el.previousElementSibling
+
+            }
+        });
+        nonHiddenEl.classList.add('hidden');
+        if(nonHiddenEl.previousElementSibling != null){
+            nonHiddenEl.previousElementSibling.classList.remove('hidden');
+        }else {
+            sliderImgLast .classList.remove('hidden');
+        }
+    });
+}
+
 

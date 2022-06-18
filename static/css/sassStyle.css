@@ -33,17 +33,20 @@ header {
   width: 26px;
   height: 26px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .menu_img {
   width: 32px;
   height: 23px;
+  cursor: pointer;
 }
 
 .cart_img {
   width: 32px;
   height: 28px;
   display: none;
+  cursor: pointer;
 }
 
 .user_img {
@@ -52,12 +55,39 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   display: none;
+  cursor: pointer;
 }
 
 .leftHeader {
   padding: 18px 16px;
 }
+.leftHeader:hover .logo_img {
+  transition-duration: 3s;
+  transform: scale(1.3, 1.3) rotate3d(6, 3, 3, 360grad);
+}
+@media (min-width: 1600px) {
+  .leftHeader:hover .logo_img {
+    animation-duration: 5s;
+    animation-name: animationLogoMin1600px;
+    transition-duration: 5s;
+    transform: scale(1.4, 1.4) rotate3d(3, 7, 3, 360grad);
+  }
+}
 
+@keyframes animationLogoMin1600px {
+  from {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  50% {
+    margin-left: -200px;
+    margin-right: 200px;
+  }
+  to {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .rightHeader {
   padding: 18px 16px;
 }
@@ -210,6 +240,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -461,10 +492,20 @@ header {
 
 .feturedCard {
   background: #F8F8F8;
+  transition-duration: 3s;
+}
+.feturedCard:hover .feturedCardImgDark {
+  display: flex;
+  transition-duration: 5s;
+}
+.feturedCard:hover .feturedCardImgDark:hover button {
+  transition-duration: 3s;
+  transform: scale(1.2, 1.2) rotateZ(400grad);
 }
 
 .feturedCardImg {
   position: relative;
+  cursor: pointer;
 }
 
 .feturedCardImg img {
@@ -494,16 +535,13 @@ header {
   padding: 10px 14px;
   font-family: Lato, sans-serif;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .feturedCardImgDark button img {
   width: 25px;
   height: 23px;
   margin-right: 10px;
-}
-
-.feturedCard:hover .feturedCardImgDark {
-  display: flex;
 }
 
 .futeredCardInfo {
@@ -551,6 +589,13 @@ header {
   font-size: 16px;
   font-family: Lato, sans-serif;
   font-weight: 400;
+  transition-duration: 1.5s;
+}
+.feturedBrowseAll:hover {
+  color: #FFFFFF;
+  background: #F16D7F;
+  transform: scale(1.1, 1.1);
+  box-shadow: 1px 1px 10px #F16D7F;
 }
 
 @media (min-width: 600px) {
@@ -583,18 +628,12 @@ header {
     margin-bottom: 95px;
   }
 }
-.feturedBrowseAll:hover {
-  color: #FFFFFF;
-  background: #F16D7F;
-}
-
 .servicesWrap {
   height: 100%;
   width: 100%;
   background: #222224;
 }
-
-.services {
+.servicesWrap .services {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -603,22 +642,50 @@ header {
   padding-bottom: 81px;
   padding-top: 45px;
 }
-
-.servicesItem {
+@media (min-width: 1600px) {
+  .servicesWrap .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.servicesWrap .services .servicesItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-
-.servicesItemInfo {
+.servicesWrap .services .servicesItem:hover .servicesItemInfoInside {
+  transform: rotateY(0deg);
+  transition-delay: 0.5s;
+}
+.servicesWrap .services .servicesItem:hover .servicesItemInfo {
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+.servicesWrap .services .servicesItem .servicesItemInfoInside {
+  position: absolute;
+  color: #FBFBFB;
+  font-weight: 400;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  margin-top: 27px;
+  margin-bottom: 15px;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transform: rotateY(-90deg);
+  transition-timing-function: linear;
+}
+.servicesWrap .services .servicesItem .servicesItemInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.5s;
+  transform: rotateY(0deg);
+  transition-timing-function: linear;
+  transition-delay: 0.5s;
 }
-
-.servicesItemInfoTitle {
+.servicesWrap .services .servicesItem .servicesItemInfo .servicesItemInfoTitle {
   color: #FBFBFB;
   font-weight: 400;
   font-family: Lato, sans-serif;
@@ -626,8 +693,7 @@ header {
   margin-top: 27px;
   margin-bottom: 15px;
 }
-
-.servicesItemInfoBottom {
+.servicesWrap .services .servicesItem .servicesItemInfo .servicesItemInfoBottom {
   color: rgba(251, 251, 251, 0.65);
   font-size: 14px;
   font-family: Lato, sans-serif;
@@ -647,9 +713,6 @@ header {
     width: 1140px;
     margin-right: auto;
     margin-left: auto;
-  }
-  .services {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 .subscribeWrap {
@@ -808,10 +871,14 @@ footer .footerIcons .iconItem {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 1s;
+  cursor: pointer;
 }
 footer .footerIcons .iconItem:hover {
   background: #F16D7F;
   color: #FFFFFF;
+  transform: scale(1.25, 1.25);
+  box-shadow: 1px 1px 10px #F16D7F;
 }
 footer .footerInfo {
   font-weight: 400;
@@ -954,7 +1021,7 @@ footer .footerInfo {
   display: block;
   padding-left: 34px;
   padding-right: 16px;
-  font-family: Lato;
+  font-family: Lato, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -1140,6 +1207,69 @@ footer .footerInfo {
   .feturedWrapCatalog {
     margin-bottom: 96px;
   }
+}
+
+.sliderWrap {
+  min-height: 624px;
+  border-top: 1px solid #EAEAEA;
+  background: #F7F7F7;
+}
+@media (min-width: 1600px) {
+  .sliderWrap {
+    min-height: 777px;
+  }
+}
+.sliderWrap .slider {
+  height: 100%;
+  position: relative;
+}
+.sliderWrap .slider .sliderImg {
+  margin-top: 85px;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .sliderWrap .slider .sliderImg {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .sliderWrap .slider .sliderImg {
+    margin-top: 11px;
+  }
+}
+.sliderWrap .slider .sliderImg img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sliderWrap .slider .sliderLeftArrow {
+  left: 0;
+  background-image: url(../images/product/slider/leftArrow.svg);
+}
+.sliderWrap .slider .sliderLeftArrow:hover {
+  background-image: url(../images/product/slider/leftArrowHover.svg);
+}
+.sliderWrap .slider .sliderRightArrow {
+  right: 0;
+  background-image: url(../images/product/slider/rightArrow.svg);
+}
+.sliderWrap .slider .sliderRightArrow:hover {
+  background-image: url(../images/product/slider/rightArrowHover.svg);
+}
+.sliderWrap .slider .sliderRightArrow, .sliderWrap .slider .sliderLeftArrow {
+  top: calc(50% - 23.5px);
+  position: absolute;
+  height: 47px;
+  width: 47px;
+  background-color: rgba(42, 42, 42, 0.15);
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=sassStyle.css.map */

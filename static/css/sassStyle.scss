@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import "variable";
 html {
   margin: auto;
 }
@@ -28,21 +29,25 @@ header {
   height: 30px;
 }
 
+
 .searh_img {
   width: 26px;
   height: 26px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .menu_img {
   width: 32px;
   height: 23px;
+  cursor: pointer;
 }
 
 .cart_img {
   width: 32px;
   height: 28px;
   display: none;
+  cursor: pointer;
 }
 
 .user_img {
@@ -51,10 +56,42 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   display: none;
+  cursor: pointer;
 }
 
 .leftHeader {
-  padding: 18px 16px ;
+  padding: 18px 16px;
+
+  &:hover{
+    .logo_img{
+      transition-duration: 3s;
+      transform: scale(1.3, 1.3) rotate3d(6,3,3, 360grad);
+
+      @media (min-width: 1600px) {
+        animation-duration: 5s;
+        animation-name: animationLogoMin1600px;
+        transition-duration: 5s;
+        transform: scale(1.4, 1.4) rotate3d(3,7,3, 360grad);
+      }
+    }
+  }
+}
+
+@keyframes animationLogoMin1600px {
+  from{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  50%{
+    margin-left: -200px;
+    margin-right: 200px;
+  }
+
+  to{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .rightHeader{
@@ -222,6 +259,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .title{
@@ -345,9 +383,6 @@ header {
 .offers img{
   width: 100%;
   object-fit: cover;
-}
-
-.element_offer:last-child img{
 }
 
 .offers >div {
@@ -494,10 +529,25 @@ header {
 
 .feturedCard{
   background: #F8F8F8;
+  transition-duration: 3s;
+
+  &:hover{
+    .feturedCardImgDark{
+      display: flex;
+      transition-duration: 5s;
+      &:hover{
+        button{
+          transition-duration: 3s;
+          transform: scale(1.2,1.2) rotateZ(400grad);
+        }
+      }
+    }
+  }
 }
 
 .feturedCardImg{
   position: relative;
+  cursor: pointer;
 }
 
 .feturedCardImg img{
@@ -527,6 +577,7 @@ header {
   padding: 10px 14px;
   font-family: Lato, sans-serif;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .feturedCardImgDark button img{
@@ -535,9 +586,6 @@ header {
   margin-right: 10px;
 }
 
-.feturedCard:hover .feturedCardImgDark{
-  display: flex;
-}
 
 .futeredCardInfo{
   padding-left: 8px;
@@ -584,6 +632,14 @@ header {
   font-size: 16px;
   font-family: Lato, sans-serif;
   font-weight: 400;
+  transition-duration: 1.5s;
+
+  &:hover{
+    color: #FFFFFF;
+    background: #F16D7F;
+    transform: scale(1.1,1.1);
+    box-shadow: 1px 1px 10px #F16D7F;
+  }
 }
 
 @media (min-width: 600px) {
@@ -620,59 +676,90 @@ header {
   }
 }
 
-.feturedBrowseAll:hover{
-  color: #FFFFFF;
-  background: #F16D7F;
-}
 
 .servicesWrap{
   height: 100%;
   width: 100%;
   background: #222224;
+
+  .services{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 45px;
+    padding-bottom: 81px;
+    padding-top: 45px;
+
+    @media (min-width: 1600px) {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .servicesItem{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &:hover{
+        .servicesItemInfoInside{
+          transform: rotateY(0deg);
+          transition-delay: 0.5s;
+        }
+
+        .servicesItemInfo{
+          transform: rotateY(-90deg);
+          transition-delay: 0s;
+        }
+      }
+
+      .servicesItemInfoInside{
+        position: absolute;
+        color: #FBFBFB;
+        font-weight: 400;
+        font-family: Lato, sans-serif;
+        font-size: 20px;
+        margin-top: 27px;
+        margin-bottom: 15px;
+        transition-delay: 0s;
+        transition-duration: 0.5s;
+        transform: rotateY(-90deg);
+        transition-timing-function: linear;
+      }
+
+      .servicesItemInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.5s;
+        transform: rotateY(0deg);
+        transition-timing-function: linear;
+        transition-delay: 0.5s;
+
+        .servicesItemInfoTitle{
+          color: #FBFBFB;
+          font-weight: 400;
+          font-family: Lato, sans-serif;
+          font-size: 20px;
+          margin-top: 27px;
+          margin-bottom: 15px;
+        }
+
+        .servicesItemInfoBottom{
+          color: rgba(251, 251, 251, 0.65);
+          font-size: 14px;
+          font-family: Lato, sans-serif;
+          font-weight: 300;
+          text-align: center;
+
+        }
+      }
+    }
+  }
 }
 
-.services{
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr;
-  row-gap: 45px;
-  padding-bottom: 81px;
-  padding-top: 45px;
-}
-
-.servicesItem{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.servicesItemInfo{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.servicesItemInfoTitle{
-  color: #FBFBFB;
-  font-weight: 400;
-  font-family: Lato, sans-serif;
-  font-size: 20px;
-  margin-top: 27px;
-  margin-bottom: 15px;
-}
-
-.servicesItemInfoBottom{
-  color: rgba(251, 251, 251, 0.65);
-  font-size: 14px;
-  font-family: Lato, sans-serif;
-  font-weight: 300;
-  text-align: center;
-
-}
 
 @media (min-width: 360px) {
   .servicesContainer{
@@ -688,10 +775,6 @@ header {
     width: 1140px;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  .services{
-    grid-template-columns: repeat(3,1fr);
   }
 }
 
@@ -848,10 +931,13 @@ footer{
       display: flex;
       justify-content: center;
       align-items: center;
-
+      transition-duration: 1s;
+      cursor: pointer;
       &:hover{
         background: #F16D7F;
         color: #FFFFFF;
+        transform: scale(1.25,1.25);
+        box-shadow: 1px 1px 10px #F16D7F;
       }
     }
   }
@@ -1001,7 +1087,7 @@ footer{
               display: block;
               padding-left: 34px;
               padding-right: 16px;
-              font-family: Lato;
+              font-family: Lato, sans-serif;
               font-size: 14px;
               font-weight: 400;
               line-height: 17px;
@@ -1213,6 +1299,73 @@ footer{
 
   @media (min-width: 1600px) {
     margin-bottom: 96px;
+  }
+}
+
+.sliderWrap{
+  min-height: 624px;
+  border-top: 1px solid #EAEAEA;
+  background: #F7F7F7;
+  
+  @media (min-width: 1600px) {
+    min-height: 777px;
+  }
+
+  .slider{
+    height: 100%;
+    position: relative;
+
+    .sliderImg{
+      margin-top: 85px;
+      height: 100%;
+      
+      @media (min-width: 768px) {
+        margin-top: 30px;
+      }
+
+      @media (min-width: 1600px) {
+        margin-top: 11px;
+      }
+      img{
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .sliderLeftArrow{
+      left: 0;
+      background-image: url(#{$pathImages}/product/slider/leftArrow.svg);
+
+      &:hover{
+        background-image: url(#{$pathImages}/product/slider/leftArrowHover.svg);
+      }
+    }
+
+    .sliderRightArrow{
+      right: 0;
+      background-image: url(#{$pathImages}/product/slider/rightArrow.svg);
+
+      &:hover{
+        background-image: url(#{$pathImages}/product/slider/rightArrowHover.svg);
+      }
+    }
+
+    .sliderRightArrow,.sliderLeftArrow{
+      top: calc(50% - 47px / 2);
+      position: absolute;
+      height: 47px;
+      width: 47px;
+      background-color: rgba(42, 42, 42, 0.15);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
   }
 }
 
