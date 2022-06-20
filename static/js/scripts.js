@@ -114,8 +114,20 @@ if(url.includes("product.html")){
         nonHiddenEl.classList.add('hidden');
         if(nonHiddenEl.nextElementSibling != null){
             nonHiddenEl.nextElementSibling.classList.remove('hidden');
+            if(nonHiddenEl.nextElementSibling.classList.contains('animate__fadeInLeftBig')){
+                nonHiddenEl.nextElementSibling.classList.remove('animate__fadeInLeftBig');
+            }
+            if(!(nonHiddenEl.nextElementSibling.classList.contains('animate__fadeInRightBig'))){
+                nonHiddenEl.nextElementSibling.classList.add('animate__fadeInRightBig');
+            }
         }else {
             sliderImgFirst.classList.remove('hidden');
+            if(sliderImgFirst.classList.contains('animate__fadeInLeftBig')){
+                sliderImgFirst.classList.remove('animate__fadeInLeftBig');
+            }
+            if(!(sliderImgFirst.classList.contains('animate__fadeInRightBig'))){
+                sliderImgFirst.classList.add('animate__fadeInRightBig');
+            }
         }
     });
 
@@ -123,15 +135,25 @@ if(url.includes("product.html")){
         sliderImages.forEach(function (el){
             if(!(el.classList.contains('hidden'))){
                 nonHiddenEl= el;
-                el.previousElementSibling
-
             }
         });
         nonHiddenEl.classList.add('hidden');
         if(nonHiddenEl.previousElementSibling != null){
             nonHiddenEl.previousElementSibling.classList.remove('hidden');
+            if(nonHiddenEl.previousElementSibling.classList.contains('animate__fadeInRightBig')){
+                nonHiddenEl.previousElementSibling.classList.remove('animate__fadeInRightBig');
+            }
+            if(!(nonHiddenEl.previousElementSibling.classList.contains('animate__fadeInLeftBig'))){
+                nonHiddenEl.previousElementSibling.classList.add('animate__fadeInLeftBig');
+            }
         }else {
-            sliderImgLast .classList.remove('hidden');
+            sliderImgLast.classList.remove('hidden');
+            if(sliderImgLast.classList.contains('animate__fadeInRightBig')){
+                sliderImgLast.classList.remove('animate__fadeInRightBig');
+            }
+            if(!(sliderImgLast.classList.contains('animate__fadeInLeftBig'))){
+                sliderImgLast.classList.add('animate__fadeInLeftBig');
+            }
         }
     });
 }
