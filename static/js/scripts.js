@@ -100,6 +100,12 @@ let sliderLeftArrow = document.querySelector('.sliderLeftArrow');
 let sliderRightArrow = document.querySelector('.sliderRightArrow');
 let sliderImgFirst = document.querySelector('.sliderImgFirst');
 let sliderImgLast = document.querySelector('.sliderImgLast');
+let collectionFilterColor = document.querySelector('.collectionFilterColorWrap');
+let collectionFilterSize = document.querySelector('.collectionFilterSizeWrap');
+let collectionFilterQuantity = document.querySelector('.collectionFilterQuantityWrap');
+let collectionFilterColorCheckboxes = document.querySelector('.filterColorsCheckboxes');
+let collectionFilterSizeCheckboxes = document.querySelector('.filterCollectionSizeCheckboxes');
+let collectionFilterQuantityCheckboxes = document.querySelector('.filterQuantityCheckboxes');
 let nonHiddenEl = null;
 console.log(sliderImages);
 
@@ -156,6 +162,18 @@ if(url.includes("product.html")){
             }
         }
     });
+
+    collectionFilterColor.addEventListener('click', function (){
+        collectionFilterColorCheckboxes.classList.toggle('hidden');
+    });
+
+    collectionFilterSize.addEventListener('click', function (){
+        collectionFilterSizeCheckboxes.classList.toggle('hidden');
+    });
+
+    collectionFilterQuantity.addEventListener('click', function (){
+        collectionFilterQuantityCheckboxes.classList.toggle('hidden');
+    })
 }
 
 
