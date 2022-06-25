@@ -674,6 +674,8 @@ header {
   transition-duration: 0.5s;
   transform: rotateY(-90deg);
   transition-timing-function: linear;
+  padding: 10px 14px;
+  text-align: center;
 }
 .servicesWrap .services .servicesItem .servicesItemInfo {
   display: flex;
@@ -1272,6 +1274,275 @@ footer .footerInfo {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.collectionWrap {
+  width: 100%;
+  margin-bottom: 68px;
+}
+.collectionWrap .collection {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #9F9F9F;
+}
+@media (min-width: 768px) {
+  .collectionWrap .collection {
+    margin-bottom: 128px;
+  }
+}
+@media (min-width: 1600px) {
+  .collectionWrap .collection {
+    margin-top: -65px;
+    border: 1px solid #9F9F9F;
+    background: white;
+    position: relative;
+  }
+}
+.collectionWrap .collection .collectionTitle {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-bottom: 12px;
+}
+.collectionWrap .collection .collectionHorizontalPlankPink {
+  height: 3px;
+  width: 64px;
+  background: #F16D7F;
+}
+.collectionWrap .collection .collectionHorizontalPlankGrey {
+  height: 1px;
+  width: 175px;
+  background: #9F9F9F;
+}
+@media (min-width: 768px) {
+  .collectionWrap .collection .collectionHorizontalPlankGrey {
+    width: 641px;
+  }
+}
+.collectionWrap .collection .collectionInfo {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collectionWrap .collection .collectionInfo .collectionInfoTitle {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  color: rgb(77, 77, 77);
+  margin-bottom: 30px;
+}
+.collectionWrap .collection .collectionInfo .collectionInfoText {
+  max-width: 400px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(94, 94, 94);
+  padding: 0 25px;
+}
+@media (min-width: 768px) {
+  .collectionWrap .collection .collectionInfo .collectionInfoText {
+    max-width: 555px;
+  }
+}
+.collectionWrap .collection .collectionInfo .collectionInfoPrice {
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 31px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #F16D7F;
+}
+.collectionWrap .collection .collectionFilters {
+  display: flex;
+  flex-direction: row;
+  margin: 48px auto 64px;
+}
+.collectionWrap .collection .collectionFilters div {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .collectionWrap .collection .collectionFilters div {
+    align-items: center;
+  }
+}
+.collectionWrap .collection .collectionFilters div span {
+  font-family: Lato, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #6F6E6E;
+  padding-right: 8px;
+}
+@media (min-width: 768px) {
+  .collectionWrap .collection .collectionFilters div span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .collectionWrap .collection .collectionFilters div img {
+    padding-top: 3px;
+  }
+}
+.collectionWrap .collection .collectionFilters div:not(div:last-child) {
+  padding-right: 23px;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor {
+  position: relative;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor .collectionFilterColorWrap {
+  cursor: pointer;
+  padding-right: 0;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor .filterColorsCheckboxes {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 3;
+  padding: 7px 9px;
+  box-sizing: border-box;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor .filterColorsCheckboxes div {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor .filterColorsCheckboxes div span {
+  margin-left: 8px;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterColor .filterColorsCheckboxes div:not(:last-child) {
+  margin-bottom: 6px;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize {
+  position: relative;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize .collectionFilterSizeWrap {
+  cursor: pointer;
+  padding-right: 0;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize .filterCollectionSizeCheckboxes {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 3;
+  padding: 7px 9px;
+  box-sizing: border-box;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize .filterCollectionSizeCheckboxes div {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize .filterCollectionSizeCheckboxes div span {
+  margin-left: 8px;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterSize .filterCollectionSizeCheckboxes div:not(:last-child) {
+  margin-bottom: 6px;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity {
+  position: relative;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity .collectionFilterQuantityWrap {
+  cursor: pointer;
+  padding-right: 0;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity .filterQuantityCheckboxes {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 3;
+  padding: 7px 9px;
+  box-sizing: border-box;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity .filterQuantityCheckboxes div {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity .filterQuantityCheckboxes div input {
+  width: 100%;
+}
+.collectionWrap .collection .collectionFilters .collectionFilterQuantity .filterQuantityCheckboxes div:not(:last-child) {
+  margin-bottom: 6px;
+}
+.collectionWrap .collection button {
+  border: 1px solid #F16D7F;
+  background: none;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #F16D7F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 50px 9px 20px;
+}
+.collectionWrap .collection button img {
+  width: 26px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.fetured__productWrap {
+  margin-bottom: 68px;
+}
+@media (min-width: 600px) {
+  .fetured__productWrap {
+    margin-bottom: 128px;
+  }
+}
+
+.fetured__product {
+  grid-template-rows: repeat(2, minmax(359px, 1fr));
+}
+.fetured__product .fetured__productHiddenUnder600px {
+  display: none;
+}
+@media (min-width: 600px) {
+  .fetured__product {
+    grid-template-rows: repeat(1, minmax(359px, 1fr));
+  }
+  .fetured__product .fetured__productHiddenUnder1200px {
+    display: none;
+  }
+  .fetured__product .fetured__productHiddenUnder600px {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .fetured__product {
+    grid-template-rows: repeat(1, minmax(359px, 1fr));
+  }
+  .fetured__product .fetured__productHiddenUnder1200px {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=sassStyle.css.map */
