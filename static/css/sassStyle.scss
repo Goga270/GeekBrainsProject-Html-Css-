@@ -65,13 +65,13 @@ header {
   &:hover{
     .logo_img{
       transition-duration: 3s;
-      transform: scale(1.3, 1.3) rotate3d(6,3,3, 360deg);
+      transform: scale(1.3, 1.3) rotate3d(6, 3, 3, 360deg);
 
       @media (min-width: 1600px) {
         animation-duration: 5s;
         animation-name: animationLogoMin1600px;
         transition-duration: 5s;
-        transform: scale(1.4, 1.4) rotate3d(3,7,3, 360grad);
+        transform: scale(1.4, 1.4) rotate3d(3, 7, 3, 360grad);
       }
     }
   }
@@ -211,6 +211,7 @@ header {
 
   .brand_text{
     margin-left: 64px;
+    height: 93px;
   }
 
   .brand_text_secondary{
@@ -219,10 +220,6 @@ header {
 
   .brand_text_title{
     font-size: 48px;
-  }
-
-  .brand_text{
-    height: 93px;
   }
 }
 
@@ -249,7 +246,7 @@ header {
   margin-left: auto;
   z-index: 100;
   right: 0;
-  box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
 
 .menu_container{
@@ -355,7 +352,7 @@ header {
 
 @media (max-width: 350px) {
   .menu{
-    height: auto ;
+    height: auto;
     box-sizing: border-box;
     padding-bottom: 15px;
   }
@@ -383,17 +380,14 @@ header {
 .offers img{
   width: 100%;
   object-fit: cover;
+  height: 100%;
+  position: absolute;
 }
 
 .offers >div {
   position: relative;
 }
 
-.offers img{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
 
 .offerTitle{
   position: relative;

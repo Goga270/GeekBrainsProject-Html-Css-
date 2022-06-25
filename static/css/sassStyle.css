@@ -196,15 +196,13 @@ header {
   }
   .brand_text {
     margin-left: 64px;
+    height: 93px;
   }
   .brand_text_secondary {
     font-size: 32px;
   }
   .brand_text_title {
     font-size: 48px;
-  }
-  .brand_text {
-    height: 93px;
   }
 }
 .brandWrap {
@@ -355,16 +353,12 @@ header {
 .offers img {
   width: 100%;
   object-fit: cover;
+  height: 100%;
+  position: absolute;
 }
 
 .offers > div {
   position: relative;
-}
-
-.offers img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
 }
 
 .offerTitle {
