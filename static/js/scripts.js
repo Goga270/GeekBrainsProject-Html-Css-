@@ -33,6 +33,9 @@ menuImg.addEventListener('click', function (){
         darkScene[i].classList.toggle('hidden');
     }
     //darkScene.classList.toggle('hidden');
+    if((menu.classList.contains('animate__fadeInTopRight'))){
+        menu.classList.remove('animate__fadeInTopRight');
+    }
     menu.classList.toggle('hidden');
     menu.classList.toggle('animate__fadeInTopRight');
 });
@@ -169,7 +172,7 @@ if(url.includes("product.html")){
 
     collectionFilterSize.addEventListener('click', function (){
         collectionFilterSizeCheckboxes.classList.toggle('hidden');
-    });
+    });sww
 
     collectionFilterQuantity.addEventListener('click', function (){
         collectionFilterQuantityCheckboxes.classList.toggle('hidden');
