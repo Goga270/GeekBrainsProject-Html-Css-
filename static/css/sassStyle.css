@@ -1809,44 +1809,6 @@ footer .footerInfo {
   background: none;
   border: 1px solid #9F9F9F;
 }
-.cartWrap .cart .cartRight .cartForm .form_container {
-  width: 100%;
-  height: 45px;
-  position: relative;
-}
-.cartWrap .cart .cartRight .cartForm .form_container label {
-  position: absolute;
-  left: 18px;
-  top: 17px;
-  font-family: Lato, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 13px;
-  color: #9F9F9F;
-  pointer-events: none;
-}
-.cartWrap .cart .cartRight .cartForm .form_container input {
-  width: 100%;
-  height: 45px;
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid #9F9F9F;
-  padding: 0 18px;
-  transition-duration: 0.5s;
-}
-.cartWrap .cart .cartRight .cartForm .form_container input:focus + label, .cartWrap .cart .cartRight .cartForm .form_container input:not(:placeholder-shown) + label {
-  top: -15px;
-  left: 20px;
-  background: #F16D7F;
-  padding: 5px 10px;
-  color: #FFFFFF;
-  transition-duration: 0.5s;
-}
-.cartWrap .cart .cartRight .cartForm .form_container input:focus {
-  box-shadow: 0 0 0 2px #F16D7F;
-  border: none;
-  outline: none;
-}
 .cartWrap .cart .cartRight .cartForm .form_container:not(:first-child) {
   margin-top: 20px;
 }
@@ -1925,6 +1887,206 @@ footer .footerInfo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.form_container {
+  width: 100%;
+  height: 45px;
+  position: relative;
+}
+.form_container label {
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  font-family: Lato, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #9F9F9F;
+  pointer-events: none;
+}
+.form_container input {
+  width: 100%;
+  height: 45px;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #9F9F9F;
+  padding: 0 18px;
+  transition-duration: 0.5s;
+}
+.form_container input:focus + label, .form_container input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 20px;
+  background: #F16D7F;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  transition-duration: 0.5s;
+}
+.form_container input:focus {
+  border: 1px solid #F16D7F;
+  outline: 1px solid #F16D7F;
+}
+
+.registrationWrap {
+  margin-top: 40px;
+  margin-bottom: 96px;
+  width: 100%;
+}
+@media (min-width: 375px) {
+  .registrationWrap {
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 768px) {
+  .registrationWrap {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1600px) {
+  .registrationWrap {
+    margin-top: 64px;
+  }
+}
+.registrationWrap .registration {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .registrationWrap .registration {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .registrationWrap .registration .regLeft {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+@media (min-width: 1600px) {
+  .registrationWrap .registration .regLeft {
+    width: 360px;
+  }
+}
+.registrationWrap .registration .regLeft .fioForm {
+  width: 100%;
+}
+.registrationWrap .registration .regLeft .fioForm form {
+  width: 100%;
+}
+.registrationWrap .registration .regLeft .fioForm .formTitle {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(74, 74, 74);
+}
+.registrationWrap .registration .regLeft .fioForm .form_container:not(:first-child) {
+  margin-top: 20px;
+}
+.registrationWrap .registration .regLeft .fioForm .formCheckboxes {
+  margin-top: 31px;
+  margin-bottom: 31px;
+  display: flex;
+  flex-direction: row;
+}
+.registrationWrap .registration .regLeft .fioForm .formCheckboxes div {
+  font-family: Lato, sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  color: #9F9F9F;
+  display: flex;
+  align-items: center;
+}
+.registrationWrap .registration .regLeft .fioForm .formCheckboxes div label {
+  margin-left: 5px;
+}
+.registrationWrap .registration .regLeft .fioForm .formCheckboxes div:not(:last-child) {
+  margin-right: 20px;
+}
+.registrationWrap .registration .regLeft .fioForm .formDescription {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-family: Lato, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  color: rgb(177, 177, 177);
+}
+.registrationWrap .registration .regLeft .fioForm button {
+  background: #F16D7F;
+  border: none;
+  padding: 17px 29px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+.registrationWrap .registration .regLeft .fioForm button > img {
+  margin-left: 20px;
+}
+@media (min-width: 768px) {
+  .registrationWrap .registration .regRight {
+    margin-left: 22px;
+  }
+}
+@media (min-width: 1600px) {
+  .registrationWrap .registration .regRight {
+    max-width: 680px;
+  }
+}
+.registrationWrap .registration .regRight .loyaltyTitle {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(74, 74, 74);
+  margin-bottom: 32px;
+}
+@media (min-width: 1600px) {
+  .registrationWrap .registration .regRight .loyaltyTitle {
+    font-size: 24px;
+  }
+}
+.registrationWrap .registration .regRight .loyaltyDescription {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(74, 74, 74);
+}
+@media (min-width: 1600px) {
+  .registrationWrap .registration .regRight .loyaltyDescription {
+    font-size: 24px;
+  }
+}
+.registrationWrap .registration .regRight .loyaltyList {
+  padding-left: 0;
+  margin: 22px 0 0;
+  list-style-type: none;
+}
+.registrationWrap .registration .regRight .loyaltyList .loyaltyListItem {
+  background: url(../images/registration/registrationMarker.png) no-repeat;
+  padding-left: 42px;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: rgb(74, 74, 74);
+}
+@media (min-width: 1600px) {
+  .registrationWrap .registration .regRight .loyaltyList .loyaltyListItem {
+    font-size: 24px;
+  }
+}
+.registrationWrap .registration .regRight .loyaltyList .loyaltyListItem:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 /*# sourceMappingURL=sassStyle.css.map */
